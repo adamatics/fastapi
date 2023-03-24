@@ -17,6 +17,11 @@ def read_user():
     return api.read_user()
 
 
+# @app.get("/user/{user_id}")
+# def read_specific_user(user_id: int):
+#     return api.read_specific_user(user_id)
+
+
 @app.get("/question/{position}", status_code=200)
 def read_questions(position: int, response: Response):
     question = api.read_questions(position)
