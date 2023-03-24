@@ -23,4 +23,6 @@ RUN set -eux \
 # copy project
 COPY . /src/
 
+EXPOSE 8000
+
 CMD ["sh", "-c", "uvicorn app.main:app --workers 2 --host 0.0.0.0 --port 8000 --root-path $ROOT_PATH"]
